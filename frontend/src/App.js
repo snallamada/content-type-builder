@@ -14,7 +14,7 @@ if (error) return <p>Please check your api...</p>
 
   return (
     <div>
-    {data.map(item => (<div key={item.id}>{item.attributes.place}</div>))}
+    {data.map(item => (<div key={item.id}>{item.attributes.title} -{item.attributes.place}</div>))}
     </div>
   )
 }
