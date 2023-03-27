@@ -4,7 +4,8 @@
   "info": {
     "singularName": "feed",
     "pluralName": "feeds",
-    "displayName": "feed"
+    "displayName": "feed",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,20 +16,27 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "rating": {
       "type": "integer"
     },
     "discription": {
       "type": "richtext"
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::city.city",
+      "inversedBy": "feeds"
     }
   }
 }

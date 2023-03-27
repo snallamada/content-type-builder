@@ -16,6 +16,12 @@
     },
     "address": {
       "type": "richtext"
+    },
+    "feeds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::feed.feed",
+      "mappedBy": "cities"
     }
   }
 }
