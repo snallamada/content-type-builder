@@ -8,14 +8,14 @@ import useFetch from './hooks/useFetch'
 
 
 const App = () => {
-const {data, loading, error} = useFetch('http://localhost:1337/api/cities')
+const {loading, error, data} = useFetch('http://localhost:1337/api/names')
 if (loading) return <p>Loading.......</p>
 if (error) return <p>Please check your api...</p>
 
   return (
-<div>{data.map(data =>{
-  <div key={data.id}>{data.attributes.cityname}</div>
-})}</div>
+    <div>
+    {data.map(item => (<div key={item.id}>{item.attributes.place}</div>))}
+    </div>
   )
 }
 
