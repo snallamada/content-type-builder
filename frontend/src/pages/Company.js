@@ -1,11 +1,10 @@
 import React from 'react'
-import { useEffect , useState } from 'react';
+import { useEffect,useState } from 'react';
 
-const Feed = () => {
-  const [data, setData] = useState([]);
-  
-  useEffect(() => {
-    fetch("http://localhost:1337/api/feeds")
+const Company = () => {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+    fetch("http://localhost:1337/api/names")
       .then(response => response.json())
       .then(result => {
        setData(result.data)
@@ -13,7 +12,7 @@ const Feed = () => {
       .catch(error => console.log(error));
   }, []);
   return (
-    <div style={{listStyle:"none"}}>
+    <div>
       
   
         {data.map(result => (
@@ -29,4 +28,4 @@ const Feed = () => {
   )
 }
 
-export default Feed
+export default Company

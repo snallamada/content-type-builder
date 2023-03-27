@@ -1,9 +1,17 @@
 import React from 'react'
+import Company from './Company'
+import Feed from './Feed'
+import City from './City'
 
-const home = () => {
+const Home = () => {
   return (
-    <div>home</div>
+    <section>
+      <div><City/></div><br></br>
+      <div><Feed/></div><br></br>
+      <div><Company/></div>
+      
+    </section>
   )
 }
 
-export default home
+export default Home
