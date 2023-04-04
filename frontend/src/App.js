@@ -5,7 +5,7 @@ import { Container } from '@mui/system'
 const App = () => {
   return (
    
-    <Container fixed sx={{ bgcolor: '#cfe8fc', height: '100vh' }}>
+    <Container fixed sx={{ bgcolor: '#cfe8fc', height: '100%' }}>
     
        <Home/>
        </Container>
